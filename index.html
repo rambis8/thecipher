@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Cipher</title>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -25,9 +26,9 @@
             <div id="algorithm">
             <label for="algorithm">Algorithm:</label>
             <div id="algoButtons">
-            <button id="aes">AES</button>
-            <button id="aes">DES</button>
-            <button id="aes">Blowfish</button>
+            <button id="aesButton">AES</button>
+            <button id="desButton">DES</button>
+            <button id="blowfishButton">Blowfish</button>
         </div>
         </div>
         <div id="buttons">
