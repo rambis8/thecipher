@@ -50,3 +50,7 @@ input {
 #inputTextArea, #keyInput, #outputTextArea {
     display: inline-block;
 }
+
+.invalid {
+    border: 2px solid red;
+  }
