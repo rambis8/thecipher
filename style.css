@@ -1,5 +1,5 @@
 body {
-    background-color: #222;
+    background-color: #080808;
     font-family: monospace;
     color: #0f0;
     display: flex;
@@ -22,6 +22,10 @@ button {
     touch-action: manipulation;
 }
 
+textarea {
+    resize: none;
+}
+
 #container {
     display: flex;
     flex-direction: column;
@@ -30,6 +34,7 @@ button {
     border: 1px solid #0f0;
     width: min-content;
     padding-bottom: 20px;
+    background-color: #222;
 }
 
 #inputSection {
@@ -65,6 +70,10 @@ button {
     border-color: #0f0;
 }
 
+.selected {
+    border-color: #0f0!important;
+}
+
 #action {
     display: flex;
     flex-direction: column;
@@ -86,7 +95,7 @@ button {
     flex-direction: column;
 }
 
-.inputform {
+.inputform, .outputform {
     display: inline-block;
     background-color: #3c3c3c;
     margin-bottom: 10px;
@@ -94,6 +103,7 @@ button {
     font-size: 1rem;
     border: 1px solid #111;
     color: #090;
+    padding: 5px;
 }
 
 .inputform:focus {
@@ -101,16 +111,10 @@ button {
     border-color:#0f0
 }
 
-.outputform {
-    display: inline-block;
-    background-color: #3c3c3c;
-    margin-bottom: 10px;
-    font-family: monospace;
-    font-size: 1rem;
-    border: 1px solid #111;
-    color: #090;
+.outputform:focus {
+    outline: none;
 }
 
 .invalid {
-    border: 2px solid red;
+    border: 1px solid #c00;
 }

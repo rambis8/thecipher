@@ -30,14 +30,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
   aesButton.addEventListener("click", function () {
     selectedAlgorithm = "AES";
+    removeClassFromSelectedButton();
+    aesButton.classList.add("selected");
   });
 
   desButton.addEventListener("click", function () {
     selectedAlgorithm = "DES";
+    removeClassFromSelectedButton();
+    desButton.classList.add("selected");
   });
 
   blowfishButton.addEventListener("click", function () {
     selectedAlgorithm = "Blowfish";
+    removeClassFromSelectedButton();
+    blowfishButton.classList.add("selected");
   });
 
   encryptButton.addEventListener("click", function () {
@@ -63,6 +69,14 @@ document.addEventListener("DOMContentLoaded", function () {
     const decryptedText = decrypt(encryptedText, key);
     outputTextArea.value = decryptedText;
   });
+
+  function removeClassFromSelectedButton() {
+    if (selectedAlgorithm) {
+      aesButton.classList.remove("selected");
+      desButton.classList.remove("selected");
+      blowfishButton.classList.remove("selected");
+    }
+  }
 
   function validateInput(text, key) {
     let isValid = true;
