@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Cipher</title>
     <script src="script.js" defer></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -15,29 +16,34 @@
         <h1>The Cipher</h1>
     </header>
     <div id="container">
-        <div id="input">
-            <label for="input">Input:</label>
-            <textarea id="inputTextArea" name="input" rows="4" cols="55" required></textarea>
-        </div>
-        <div id="key">
-            <label for="key">Key:</label>
-            <input type="text" id="keyInput" name="key" required>
-        </div>
+        <div id="inputSection">
+            <div id="input">
+                <label for="input">Input:</label>
+                <textarea id="inputTextArea" class="inputform" name="input" rows="4" cols="55" required></textarea>
+            </div>
+            <div id="key">
+                <label for="key">Key:</label>
+                <input type="text" class="inputform" id="keyInput" name="key" required>
+            </div>
             <div id="algorithm">
-            <label for="algorithm">Algorithm:</label>
-            <div id="algoButtons">
-            <button id="aesButton">AES</button>
-            <button id="desButton">DES</button>
-            <button id="blowfishButton">Blowfish</button>
-        </div>
-        </div>
-        <div id="buttons">
-            <button id="encryptButton">Encrypt</button>
-            <button id="decryptButton">Decrypt</button>
+                <label for="algorithm">Algorithm:</label>
+                <div id="algoButtons">
+                    <button id="aesButton">AES</button>
+                    <button id="desButton">DES</button>
+                    <button id="blowfishButton">Blowfish</button>
+                </div>
+            </div>
+            <div id="action">
+                <label for="action">Action:</label>
+                <div id="actionButtons">
+                    <button id="encryptButton">Encrypt</button>
+                    <button id="decryptButton">Decrypt</button>
+                </div>
+            </div>
         </div>
         <div id="output">
             <label for="output">Output:</label>
-            <textarea id="outputTextArea" name="output" rows="4" cols="55"></textarea>
+            <textarea id="outputTextArea" class="outputform" name="output" rows="4" cols="55" readonly></textarea>
         </div>
     </div>
 </body>
